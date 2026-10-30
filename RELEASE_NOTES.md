@@ -1,3 +1,7 @@
+# KAI Plugin Registry 0.1.1
+
+Sequence 2 lists all eleven official plugin 0.1.1 releases, restoring the original KAI app layouts and light workspace styling in separate windows. Package signatures, exact content hashes, publisher pins and existing permission scopes are verified.
+
 # KAI Plugin Registry 0.1.0
 
 - Initial signed catalog of eleven official KAI Core plugins, including Koinos Node and Remote Access.
