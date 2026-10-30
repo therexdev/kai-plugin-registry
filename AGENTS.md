@@ -1,0 +1,1 @@
+This repository publishes the signed KAI plugin catalog. Never commit private signing keys, execute submitted plugin code during validation, or weaken publisher, version, permission, or package digest checks. Community plugins stay in their own repositories. Catalog inclusion does not grant private Core APIs.
