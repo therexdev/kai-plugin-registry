@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "publicPermissions": [
+    "models.read",
+    "inference.local",
+    "storage.read",
+    "storage.write"
+  ],
+  "official": [
+    {
+      "id": "kai.assistant",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "assistant.read",
+        "assistant.write"
+      ]
+    },
+    {
+      "id": "kai.brain",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "brain.read",
+        "brain.write",
+        "brain.import",
+        "brain.export"
+      ]
+    },
+    {
+      "id": "kai.connections",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "connections.read",
+        "connections.manage",
+        "connections.execute"
+      ]
+    },
+    {
+      "id": "kai.workflows",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "workflows.read",
+        "workflows.write",
+        "workflows.run"
+      ]
+    },
+    {
+      "id": "kai.agent-network",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "agent-network.read",
+        "agent-network.write",
+        "agent-network.manage",
+        "agent-network.network"
+      ]
+    },
+    {
+      "id": "kai.documents",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "documents.read",
+        "documents.write",
+        "documents.import",
+        "documents.export",
+        "documents.draft"
+      ]
+    },
+    {
+      "id": "kai.model-compare",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": []
+    },
+    {
+      "id": "kai.code",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "code.read",
+        "code.assist",
+        "code.write"
+      ]
+    },
+    {
+      "id": "kai.tools",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "tools.read",
+        "tools.manage",
+        "tools.execute"
+      ]
+    },
+    {
+      "id": "kai.koinos-node",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "koinos-node.read",
+        "koinos-node.manage"
+      ]
+    },
+    {
+      "id": "kai.remote-access",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "permissions": [
+        "remote-access.read",
+        "remote-access.control",
+        "remote-access.keys"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+name: Verify and publish signed registry
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: registry-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm test
+      - name: Verify signed catalog and published plugin assets
+        run: npm run verify:online
+      - name: Publish immutable signed registry asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          version=$(node -p "require('./catalog.json').version")
+          tag="v$version"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            mkdir -p "$RUNNER_TEMP/existing-registry"
+            gh release download "$tag" --pattern registry.json --dir "$RUNNER_TEMP/existing-registry"
+            cmp dist/registry.json "$RUNNER_TEMP/existing-registry/registry.json"
+            echo "Existing immutable registry matches verified contents."
+          else
+            gh release create "$tag" dist/registry.json --target "$GITHUB_SHA" --title "KAI Plugin Registry $version" --notes-file RELEASE_NOTES.md
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: signed-registry
+          path: dist/registry.json
+          if-no-files-found: error

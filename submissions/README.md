@@ -1,0 +1,3 @@
+Add one `<publisher.plugin>.json` entry here to request a listing. Generate it with `npm run entry -- path/to/published.kaiplugin owner/repo 0.3.0`, then redirect the JSON to a file without npm's wrapper output (`node scripts/create-entry.js ... > submissions/publisher.plugin.json`).
+
+Submit a pull request that changes only your submission file. Include the source and release URLs, what the plugin does, requested permissions, and its license. Do not add private keys, credentials, binaries, dependencies, or executable review scripts. Publishing a PR does not automatically list a plugin: maintainers review it, verify the published bundle as data, and explicitly include it in a new signed catalog.

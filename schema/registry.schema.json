@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Signed KAI plugin registry envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "catalog",
+    "publicKey",
+    "signature"
+  ],
+  "properties": {
+    "catalog": {
+      "$ref": "catalog.schema.json"
+    },
+    "publicKey": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9+/]{59}=$",
+      "description": "Base64 DER SPKI Ed25519 public key"
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9+/]{86}==$"
+    }
+  }
+}
