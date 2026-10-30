@@ -1,3 +1,3 @@
-# KAI Plugin Registry 0.2.0
+# KAI Plugin Registry 0.2.1
 
-Lists all eleven restored original-feature plugins, requiring KAI Core 0.5.0. Workflows and Agent Network use 0.2.1 with their complete original shared styles; the other plugins use 0.2.0. Exact signatures, publisher identity, permission grants and package digests are pinned. Catalog sequence 3 preserves replay protection; installation remains manual.
+Sequence 4 publishes Remote Access 0.2.1, requiring Core 0.6.1. It removes the Optional sections panel and the Node, Developer tools and Koinos Code management capability from Remote Access. Other plugin releases are unchanged.

@@ -141,7 +141,6 @@
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
       "permissions": [
         "remote-access.keys",
-        "remote-access.features",
         "remote-access.read",
         "remote-access.control",
         "desktop.navigate",
