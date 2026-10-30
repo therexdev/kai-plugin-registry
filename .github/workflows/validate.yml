@@ -1,16 +1,23 @@
-name: Validate catalog submissions
+name: Validate Foundation catalog tooling
 on:
+  push:
+    branches: [foundation-v1]
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
       - run: npm test
-      - run: npm run verify:online
+      - name: Verify the existing signed catalog without executing plugins
+        run: npm run verify
+      - name: Verify published assets for proposed catalog changes
+        if: github.event_name == 'pull_request'
+        run: npm run verify:online

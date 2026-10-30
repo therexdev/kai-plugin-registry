@@ -1,152 +1,74 @@
 {
-  "schema": 1,
+  "schema": 2,
+  "apiVersion": 3,
+  "minimumCoreVersion": "0.7.0",
   "publicPermissions": [
+    "native.execute",
     "models.read",
+    "models.manage",
     "inference.local",
+    "inference.network",
     "storage.read",
-    "storage.write"
+    "storage.write",
+    "network.status",
+    "network.fetch",
+    "network.configure",
+    "desktop.media",
+    "desktop.external",
+    "desktop.navigate",
+    "desktop.preferences",
+    "desktop.windows",
+    "wallet.read",
+    "wallet.authorize",
+    "account.request",
+    "secrets.use",
+    "services.call",
+    "services.provide"
   ],
   "official": [
     {
       "id": "kai.assistant",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "assistant.chat",
-        "assistant.native",
-        "assistant.network",
-        "assistant.read",
-        "assistant.media",
-        "assistant.write",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.brain",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "brain.read",
-        "brain.write",
-        "brain.import",
-        "brain.export",
-        "brain.workflow",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.connections",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "connections.read",
-        "connections.manage",
-        "connections.execute",
-        "connections.brain",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.workflows",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "workflows.read",
-        "workflows.write",
-        "workflows.run",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.agent-network",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "agent-network.read",
-        "agent-network.write",
-        "agent-network.network",
-        "agent-network.manage",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.documents",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "desktop.preferences",
-        "documents.draft",
-        "documents.read",
-        "documents.write",
-        "documents.import",
-        "documents.export",
-        "desktop.navigate",
-        "desktop.external"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.model-compare",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "compare.run",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.code",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "desktop.preferences",
-        "code.execute",
-        "code.read",
-        "code.assist",
-        "code.write",
-        "desktop.navigate",
-        "desktop.external"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.tools",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "tools.read",
-        "tools.manage",
-        "tools.execute",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.koinos-node",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "koinos-node.read",
-        "koinos-node.manage",
-        "koinos-node.wallet",
-        "koinos-node.fund",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     },
     {
       "id": "kai.remote-access",
-      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "permissions": [
-        "remote-access.keys",
-        "remote-access.read",
-        "remote-access.control",
-        "desktop.navigate",
-        "desktop.external",
-        "desktop.preferences"
-      ]
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440"
     }
   ]
 }

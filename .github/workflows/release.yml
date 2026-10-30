@@ -10,6 +10,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   release:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -20,7 +21,13 @@ jobs:
       - run: npm test
       - name: Verify signed catalog and published plugin assets
         run: npm run verify:online
+      - name: Detect a signed Foundation catalog release
+        id: catalog
+        shell: bash
+        run: |
+          node -e 'const fs=require("node:fs"),c=require("./catalog.json");fs.appendFileSync(process.env.GITHUB_OUTPUT,"foundation="+(c.plugins.length>0&&c.plugins.every(p=>p.apiVersion===3))+"\n")'
       - name: Publish immutable signed registry asset
+        if: steps.catalog.outputs.foundation == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -29,14 +36,18 @@ jobs:
           tag="v$version"
           if gh release view "$tag" >/dev/null 2>&1; then
             mkdir -p "$RUNNER_TEMP/existing-registry"
-            gh release download "$tag" --pattern registry.json --dir "$RUNNER_TEMP/existing-registry"
+            gh release download "$tag" --pattern registry-foundation.json --pattern registry.json --dir "$RUNNER_TEMP/existing-registry"
+            cmp dist/registry-foundation.json "$RUNNER_TEMP/existing-registry/registry-foundation.json"
             cmp dist/registry.json "$RUNNER_TEMP/existing-registry/registry.json"
             echo "Existing immutable registry matches verified contents."
           else
-            gh release create "$tag" dist/registry.json --target "$GITHUB_SHA" --title "KAI Plugin Registry $version" --notes-file RELEASE_NOTES.md
+            gh release create "$tag" dist/registry-foundation.json dist/registry.json --target "$GITHUB_SHA" --title "KAI Plugin Registry $version" --notes-file RELEASE_NOTES.md
           fi
       - uses: actions/upload-artifact@v4
+        if: steps.catalog.outputs.foundation == 'true'
         with:
           name: signed-registry
-          path: dist/registry.json
+          path: |
+            dist/registry-foundation.json
+            dist/registry.json
           if-no-files-found: error

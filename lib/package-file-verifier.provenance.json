@@ -1,0 +1,10 @@
+{
+  "repository": "therexdev/kai-core",
+  "source": "core/lib/plugins/package-file-verifier.js",
+  "sourceSha256": "64d53a27b6cdb7d13f6bad0b46fc94e309792fe476bd4aa059166c0bfd9b02ce",
+  "vendoredSha256": "d488bd79312c94e3185152d7b203a7b414b5015ff2e8300503e984b88d9068b6",
+  "adaptation": "Only package import redirected to ./package-format-v3",
+  "schema": 2,
+  "apiVersion": 3,
+  "minimumCoreVersion": "0.7.0"
+}

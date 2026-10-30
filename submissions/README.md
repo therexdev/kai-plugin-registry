@@ -1,3 +1,11 @@
-Add one `<publisher.plugin>.json` entry here to request a listing. Generate it with `npm run entry -- path/to/published.kaiplugin owner/repo 0.3.0`, then redirect the JSON to a file without npm's wrapper output (`node scripts/create-entry.js ... > submissions/publisher.plugin.json`).
+Add one `<publisher.plugin>.json` file to request a Foundation catalog listing. New submissions require package schema 2/API 3 and Core 0.7.0 or later:
 
-Submit a pull request that changes only your submission file. Include the source and release URLs, what the plugin does, requested permissions, and its license. Do not add private keys, credentials, binaries, dependencies, or executable review scripts. Publishing a PR does not automatically list a plugin: maintainers review it, verify the published bundle as data, and explicitly include it in a new signed catalog.
+```sh
+node scripts/create-entry.js path/to/published.kaiplugin owner/repository 0.7.0 > submissions/publisher.plugin.json
+```
+
+Submit a pull request changing only that entry. Include source/release links, supported platforms, license, capability explanations and an accurate native-code trust description when applicable. Do not include private keys, credentials, executable review scripts, package binaries or dependencies in the submission itself.
+
+Every publisher uses the same public Foundation API. `kai.*` is reserved for official catalog branding, not privileged access. Native plugins require `native.execute` and explicit full-computer trust during installation; signatures are not safety endorsements.
+
+Maintainers verify the published package as data and explicitly include accepted entries in a new signed catalog. Submitting a pull request does not list or execute your plugin automatically.

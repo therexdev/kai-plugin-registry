@@ -1,9 +1,10 @@
 "use strict";
 const fs = require("node:fs"), path = require("node:path"), crypto = require("node:crypto");
 const { canonical, verifyRegistry, validateCatalog } = require("../lib/catalog");
-const root = path.join(__dirname, ".."), [keyFile, output = path.join(root, "dist", "registry.json")] = process.argv.slice(2);
+const root = path.join(__dirname, ".."), [keyFile, output = path.join(root, "dist", "registry-foundation.json")] = process.argv.slice(2);
 if (!keyFile) throw Error("Usage: node scripts/sign-catalog.js <private-key.pem> [output.json]");
 const catalog = validateCatalog(JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8")));
+if (!catalog.plugins.length || catalog.plugins.some(entry => entry.apiVersion !== 3)) throw Error("New signed releases require Foundation API 3 entries");
 if (catalog.version !== require("../package.json").version) throw Error("Catalog and repository versions differ");
 const key = crypto.createPrivateKey(fs.readFileSync(keyFile)); if (key.asymmetricKeyType !== "ed25519") throw Error("Ed25519 private key required");
 const envelope = { catalog, publicKey: crypto.createPublicKey(key).export({ format: "der", type: "spki" }).toString("base64"), signature: crypto.sign(null, Buffer.from(canonical(catalog)), key).toString("base64") };

@@ -1,43 +1,44 @@
 # KAI Plugin Registry
 
-A signed catalog of installable KAI Core plugins. The registry is hosted as a small JSON asset on GitHub Releases; it is not a server and does not need to be installed as a plugin.
+This repository publishes a signed catalog of installable KAI Foundation plugins. It is catalog infrastructure, not executable plugin code or a plugin that users install.
 
-**Catalog endpoint:** <https://github.com/therexdev/kai-plugin-registry/releases/latest/download/registry.json>
+**Foundation catalog endpoint:** [registry-foundation.json](https://github.com/therexdev/kai-plugin-registry/releases/latest/download/registry-foundation.json)
 
-KAI Core 0.3.0 adds a **Refresh catalog** control in Plugins. Core downloads this catalog only when requested, verifies the pinned KAI registry signature, and shows compatible entries. Installing a plugin downloads its signed package from its publisher's own repository and asks for native permission approval. Refreshing the registry does not install, update, enable, or run a plugin.
+Foundation plugins use package schema 2/API 3 and require Core 0.7.0 or later. Every publisher uses the same documented Core API. Plugins own their feature code, data, assets and bundled dependencies. The catalog may list sandboxed UI plugins or explicitly trusted native plugins; native code has full computer/application access and is not isolated by its folder or publisher signature.
 
-The first release lists Assistant, Brain, Connections, Workflows, Agent Network, Documents, Model Compare, Code, Tools, Koinos Node, and Remote Access. The two new plugins require Core 0.3.0; the earlier nine require Core 0.2.0. Individual plugin READMEs describe each initial release's supported features and limits.
+Refreshing a catalog does not install, update, enable or run a plugin. Installation still verifies the package and presents its publisher and trust requirements. Official `kai.*` names are reserved in this curated catalog for brand identity; they do not unlock special runtime APIs.
 
-## Publish your own plugin
+## Submit a plugin
 
-1. Create your own source repository. Choose an ID such as `yourname.yourplugin`; `kai.*` is reserved for official plugins.
-2. Build a sandboxed HTML/JS/CSS plugin using the [public Core API](https://github.com/therexdev/kai-core/blob/main/docs/core/PLUGIN_API.md). Public grants are `models.read`, `inference.local`, `storage.read`, and `storage.write`. A registry listing cannot grant private Brain, wallet, account, node, or remote APIs.
-3. Generate and privately back up your own Ed25519 publisher key. Use the Core `plugin:pack` command to sign your `.kaiplugin` file, then publish that immutable asset in a GitHub release tagged `v<version>` in your repository. Keep the same key for future versions of the same ID.
-4. Clone this registry and create metadata from the published package:
+1. Create your own repository and choose an ID such as `yourname.yourplugin`.
+2. Build with the [Foundation author guide](https://github.com/therexdev/kai-core/blob/main/docs/foundation/PLUGIN_AUTHOR_GUIDE.md). Use a schema 2/API 3 manifest and declare only needed public capabilities and service dependencies. A native service must declare `native.execute` and be accurately described as full-trust code.
+3. Pin and bundle runtime dependencies before signing. No client-side npm install, postinstall, source checkout or compilation is allowed. Keep your Ed25519 private publisher key outside all repositories and packages.
+4. Use Core's packer to create the signed `.kaiplugin`, then publish it as an immutable GitHub Release asset under `v<version>` in your repository. Keep the same publisher key for future versions of that ID.
+5. Generate an entry from the released package:
 
    ```sh
-   node scripts/create-entry.js /path/to/yourplugin-1.0.0.kaiplugin yourname/yourplugin 0.3.0 > submissions/yourname.yourplugin.json
+   node scripts/create-entry.js /path/to/yourplugin-1.0.0.kaiplugin yourname/yourplugin 0.7.0 > submissions/yourname.yourplugin.json
    ```
 
-5. Open a pull request containing only that submission file. Include source/release links, license, and the reason for each permission. No registry signing key is needed for submissions.
+6. Open a pull request containing your submission file. Include source/release links, license, supported platforms, native-access explanation if applicable, and the purpose of each requested capability.
 
-Maintainers review the source, permissions, publisher identity, and released package as data. Accepted entries are copied into a new signed catalog release. Submission does not automatically publish a listing. Plugin code, package install hooks, and dependencies are never executed by the registry verifier.
+Maintainers review and verify package bytes as data. The registry verifier never imports plugin code, executes native services, runs build/install hooks or downloads runtime dependencies. A submission does not automatically publish a listing. Users may also install a package directly using Core's third-party installation controls without a catalog listing.
 
-Users can also install a signed package directly through Core using its URL or local file without waiting for a registry listing. They still review the publisher and permissions. Existing plugin data remains bound to the original publisher even after uninstalling a plugin.
+## Catalog integrity
 
-## Catalog and trust
+`catalog.json` is the next readable catalog and `dist/registry-foundation.json` is its signed Foundation envelope. The previously published `dist/registry.json` is retained byte-for-byte for the old application channel, with its catalog and checksum under `archive/`. New releases publish both asset names so old Core versions do not receive the new incompatible catalog. Each entry pins ID, name, description, version, package API version, minimum Core version, repository, immutable asset URL, publisher public key/fingerprint, package digest and requested permissions. Entries for API 3 require Core >=0.7.0 and the same public permission vocabulary for all publishers.
 
-`catalog.json` is the readable source; `dist/registry.json` is the signed envelope. Schemas live in `schema/`. Each entry pins the plugin ID, version, API version, minimum Core version, repository, immutable release URL, public key, publisher fingerprint, content digest, and requested permissions.
+For API 3 packages, the signature covers the manifest and a sorted table of each file's path, encoding, decoded byte count and SHA-256. The verifier recomputes this table from the package bytes. The catalog package digest binds that payload, publisher key and signature with the `kai-plugin-package-digest-v3` domain; it does not hash the full base64 JSON representation again. Archived schema 1 package digests retain their original canonical-JSON definition.
 
-The `sha256` field is the SHA-256 of UTF-8 canonical JSON for the complete signed `.kaiplugin` object. Canonicalization recursively sorts object keys and preserves array order. It is intentionally independent of indentation and key order in the downloaded JSON file. Core also verifies the plugin's own signature, so registry approval cannot substitute for publisher verification.
+Package signatures and digest definitions follow the exact vendored Foundation verifier in `lib/package-format-v3.js`; its source provenance hash is recorded beside it. `policy.json` contains public grants and official catalog identity pins. There is no first-party private capability table for Foundation packages.
 
-The registry envelope's Ed25519 signature covers canonical JSON of `catalog`. Its key is pinned in Core. A catalog has a monotonic `sequence`, semantic `version`, and `generatedAt`/`expiresAt` validity interval of at most 366 days. Core verifies its cached signature on every read, rejects older sequences/versions and changes to an existing sequence, and preserves the last good cache after failed refreshes. An expired or invalid cache blocks catalog installation until repaired/refreshed; it does not silently return withdrawn entries from the bundled fallback. A fresh Core profile can use the bundled official list before its first registry refresh.
+The catalog's Ed25519 signature covers canonical JSON of the catalog itself. The registry key is pinned in Core. Catalog versions and sequence numbers increase, timestamps use UTC, and validity intervals are at most 366 days. Package assets are immutable. Changing or removing a catalog listing does not remotely stop an installed plugin.
 
-Removing an entry from a newer catalog stops listing it. It does not remotely disable an installed plugin, and the registry does not provide immediate security revocation. Updates are user initiated and require a new version and permission review. Keep the registry key private; no private key or signing secret belongs in this repository or Actions.
+`lib/plugin-v2-archive.js` and `lib/legacy-policy.json` exist solely to audit previously published immutable catalogs/packages. New submissions and `create-entry.js` reject those old package formats. Updating tooling does not regenerate, rewrite or re-sign the existing catalog; a new catalog is a separate reviewed release.
 
-## Maintainer release
+## Maintainer verification and release
 
-This project has no npm dependencies. Use Node 22 or newer.
+The tooling has no npm dependencies and uses Node 24 in CI.
 
 ```sh
 npm test
@@ -45,17 +46,19 @@ npm run verify
 npm run verify:online
 ```
 
-For each new catalog release:
+The first two commands validate metadata, policy, signatures and exact catalog/source equality, plus the unchanged legacy asset checksum. Online verification also fetches each listed immutable asset and checks the publisher signature and all pinned metadata. It sends no credentials and permits only GitHub release-asset hosts and their supported redirects. Foundation downloads stream into temporary files, and verification computes decoded file hashes with a bounded-memory JSON reader; even large native packages are neither loaded as one JSON object nor executed. Temporary downloads and review directories are removed after verification. The adapted Core reader/verifier snapshots have their own provenance hashes beside the source files.
 
-1. Review submissions, then copy approved entries into `catalog.json`. Do not change a plugin's existing publisher key or reuse an immutable release version for different contents. Keep `policy.json` aligned with reviewed Core permission contracts; community plugins use only the public grants.
-2. Increase `catalog.sequence`, `catalog.version`, and `package.json` version. Set current `generatedAt`, an `expiresAt` no more than 366 days later, and update `RELEASE_NOTES.md`.
-3. Remove the old local `dist/registry.json`, then sign the new catalog using the privately held registry key:
+For a new Foundation catalog:
+
+1. Wait until every listed signed plugin asset exists. Review its exact publisher/version/digest, public capabilities, supported platforms and native trust requirements. Never alter an existing plugin's pinned publisher to work around a signature mismatch.
+2. Add the reviewed API 3 entries with minimum Core 0.7.0. Increase `catalog.version`, `catalog.sequence` and `package.json` version; set fresh `generatedAt`/`expiresAt` and release notes. Keep older GitHub release assets immutable.
+3. Sign the new catalog with the offline maintainer key into a new output file. The signer refuses to overwrite an output and refuses legacy entries in a new release:
 
    ```sh
-   node scripts/sign-catalog.js /private/path/to/publisher-key.pem
+   node scripts/sign-catalog.js /private/path/to/registry-key.pem /tmp/registry-new.json
    ```
 
-4. Run the checks above. Online verification fetches every listed immutable release, confirms all metadata/signatures/digests, and never executes plugin code. All referenced plugin assets must already exist.
-5. Commit the reviewed catalog and signed asset to `main`. Actions repeats verification and publishes `registry.json` under `v<catalog.version>`. If that release already exists, the workflow only accepts an identical asset; it refuses to overwrite it.
+4. Set the local working `dist/registry-foundation.json` with that newly reviewed envelope, then run all three verification commands. This changes the next working release, not an old published asset.
+5. Commit the verified catalog and pre-signed envelope to `main`. Actions publishes only from `main`, only when all entries use Foundation API 3, and only after signature and online package verification. An existing release must match byte-for-byte; it is never overwritten. The old `registry.json` asset is carried forward unchanged; only `registry-foundation.json` receives Foundation entries.
 
-Core's registry verification uses DNS-pinned public HTTPS requests for the catalog and every redirect. The standalone maintainer verifier restricts package downloads to GitHub and its public release-asset hosts. No credentials are sent to package hosts.
+The `foundation-v1` branch and pull requests validate source/tooling without publishing. No signing secrets are stored in Actions. Native device/integration testing belongs to the plugin release process; a successful catalog check does not certify that a native plugin is safe or functional on a user's computer.

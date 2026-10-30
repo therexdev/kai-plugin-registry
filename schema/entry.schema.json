@@ -39,12 +39,14 @@
     "apiVersion": {
       "enum": [
         1,
-        2
+        2,
+        3
       ]
     },
     "minCoreVersion": {
       "type": "string",
-      "pattern": "^(0|[1-9][0-9]{0,8})\\.(0|[1-9][0-9]{0,8})\\.(0|[1-9][0-9]{0,8})$"
+      "pattern": "^(0|[1-9][0-9]{0,8})\\.(0|[1-9][0-9]{0,8})\\.(0|[1-9][0-9]{0,8})$",
+      "description": "Foundation API 3 entries require 0.7.0 or later; older versions are archive metadata only."
     },
     "repository": {
       "type": "string",
@@ -67,11 +69,11 @@
     "sha256": {
       "type": "string",
       "pattern": "^[a-f0-9]{64}$",
-      "description": "SHA256 of canonical JSON for the complete signed plugin package"
+      "description": "API 3: domain-separated SHA256 binding decoded-file signing payload, publisher key and signature. Archived API 1/2: SHA256 of canonical complete signed package JSON."
     },
     "permissions": {
       "type": "array",
-      "maxItems": 30,
+      "maxItems": 100,
       "uniqueItems": true,
       "items": {
         "type": "string",

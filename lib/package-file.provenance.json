@@ -1,0 +1,10 @@
+{
+  "repository": "therexdev/kai-core",
+  "source": "core/lib/plugins/package-file.js",
+  "sourceSha256": "6cc784970b6f226c7db8c1f171ad9e5572cac1815c6752c9904466994c943d45",
+  "vendoredSha256": "bf86d2d99c7e71a618fa304688742dee143e7b7e4fa99c4383b205795525c8f5",
+  "adaptation": "Only package import redirected to ./package-format-v3",
+  "schema": 2,
+  "apiVersion": 3,
+  "minimumCoreVersion": "0.7.0"
+}
