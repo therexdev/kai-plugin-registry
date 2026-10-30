@@ -4,9 +4,13 @@ const { verifyRegistry, validateCatalog } = require("../lib/catalog"), { verifyE
 const root = path.join(__dirname, "..");
 async function main() {
   async function verifyPublished(entry) {
-    const download = await fetchReleaseFile(entry.url, entry.apiVersion === 3 ? MAX_PACKAGE_BYTES : 24 * 1024 * 1024);
-    let verified;
-    try { verified = verifyEntryPackageFile(entry, download.file); } finally { verified?.dispose?.(); download.dispose(); }
+    let download, verified;
+    try {
+      download = await fetchReleaseFile(entry.url, entry.apiVersion === 3 ? MAX_PACKAGE_BYTES : 24 * 1024 * 1024);
+      verified = verifyEntryPackageFile(entry, download.file);
+      console.log(`Verified published ${entry.id}@${entry.version}.`);
+    } catch (error) { throw Error(`${entry.id}: ${error.message}`, { cause: error }); }
+    finally { verified?.dispose?.(); download?.dispose(); }
   }
   const catalog = validateCatalog(JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8")));
   const foundation = catalog.plugins.length > 0 && catalog.plugins.every(entry => entry.apiVersion === 3);
