@@ -1,9 +1,7 @@
-# KAI Foundation plugin catalog 0.3.7
+# KAI Foundation plugin catalog 0.3.8
 
-Adds **Master KAI Koinos Node 0.1.0**, a separate developer node plugin with the complete Master dashboard, wallet, funding, block production, community Distribution and Node API workspaces. The standard Koinos Node plugin stays available separately.
+Updates Assistant to **0.3.3**, Documents to **0.3.1** and Compare Models to **0.3.1**. Update to **KAI Core Beta 0.7.9** first for the matching local-model queue, cancellation and preparation fixes.
 
-Distribution includes reward and reburn tracking, recipient and pool splits, daily settlement, pause and Reset Stats. Node API provides an explicitly enabled local endpoint for supported blockchain requests and producer statistics, with optional history and metadata services. Both features start disabled.
+Assistant restores the upper-right **Open KAI** robot launcher and polished controls. Documents improves action buttons and streamed editing. Compare Models fixes delayed first-token replies and adds a reply-length control. All three include fixes for interrupted or stopped model requests.
 
-The plugin also offers an explicit chain-data migration from Master Koinos AI Node. Wallets, production keys, KOIN and VHP are not migrated. Its wallet and saved settings belong to this plugin.
-
-Catalog sequence 12 adds the new reviewed package and retains the existing eleven plugin entries unchanged. Core 0.7.3 or later is required for the new plugin. The archived legacy registry.json remains byte-for-byte unchanged. Refreshing the catalog does not install a plugin, enable its API or distribution, or migrate data. Native plugins require full computer/application trust; their renderer UI remains sandboxed.
+Catalog sequence 13 updates these three signed packages and retains the other nine plugin entries unchanged, including Master KAI Koinos Node. The archived legacy registry.json remains unchanged. Refreshing the catalog does not install updates or alter saved plugin data.
