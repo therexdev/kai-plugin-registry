@@ -1,5 +1,5 @@
-# KAI Foundation plugin catalog 0.3.10
+# KAI Plugin Registry 0.3.11
 
-Updates Koinos Node to **0.3.6** with **Send All** in its wallet. It reads a fresh balance for the selected token and network, fills the exact amount, and accounts for KOIN mana limits. Filling the amount never submits a transaction; password and transfer review are still required.
+Updates **Master KAI Koinos Node** to **0.1.1**, fixing the disabled signing-key registration button after wallet import. The button opens the plugin Wallet when unlocking is required, updates immediately after unlock, and prevents duplicate requests while registration approval is pending.
 
-Catalog sequence 15 updates this signed package and keeps the other eleven entries unchanged. Refresh the catalog and update Koinos Node to install it. Core Beta 0.7.12 separately adds the matching Core wallet dialog and updated Earn details.
+All other plugin entries and the archived legacy catalog remain unchanged. The Master plugin retains its existing publisher and minimum Core version of 0.7.3.
