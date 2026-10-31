@@ -1,13 +1,11 @@
-# KAI Foundation plugin catalog 0.3.3
+# KAI Foundation plugin catalog 0.3.4
 
-Updates Koinos Node to version 0.3.3. The other ten Foundation plugins retain their existing version 0.3.0 package and publisher pins. These packages require KAI Core 0.7.0 or later and use the same documented public APIs for every publisher.
+Updates Koinos Node to 0.3.4. The other ten plugins retain their existing 0.3.0 packages and publisher pins. KAI Core 0.7.0 or later is required.
 
-Koinos Node fixes a false network mismatch when migrating an Alpha node with Windows-formatted genesis JSON. Migration compares the complete genesis content while accepting insignificant whitespace, a UTF-8 BOM, object-property order and equivalent exact numeric values. Every field, value type and array order remains checked. Bounded parsing preserves numeric precision and rejects duplicate keys and malformed input. File-access, safety and formatting problems now receive distinct explanations; genuine network differences still block migration.
+Koinos Node fixes Windows startup failing with `EPERM` when replacing generated configuration copied from read-only plugin templates. Generated public configuration is now writable, and existing read-only copies are repaired. Installed plugin files remain read-only.
 
-Migration still requires explicit review, stops only the verified old node, transfers chain databases with resumable recovery, and removes each old file only after its destination is verified. The old application must be closed before migrating. Wallets, private producer keys, KOIN and VHP remain separate; block production stays off. If you created a new Node wallet, transfer funds manually.
+Update Koinos Node in Plugins, then start the node again. A completed migration does not need to be repeated. Chain data, the plugin wallet, producer keys, funding records and migration journals are preserved. This update does not move funds or enable block production.
 
-Native plugins require explicit trust for full computer and application access. Their signed renderer UI remains sandboxed; native code is not isolated by its manifest. Dependencies are bundled before publication, with no npm installation or hooks on the user’s computer.
+Catalog sequence 9 pins the exact signed Node package. Every other plugin entry is unchanged, and the legacy `registry.json` remains byte-for-byte identical for older Core installations. Refreshing the catalog does not install updates or migrate data.
 
-Catalog sequence 8 pins the exact signed Node package digest and retains every other entry unchanged. Large packages are downloaded and verified with bounded memory without executing plugin code. The previously published `registry.json` is included byte-for-byte for older Core installations.
-
-Refreshing the catalog does not install updates or migrate data. Migration runs only after the user explicitly starts and reviews it in the installed plugin. Core 0.7.2 separately provides wallet-credit restoration and optional model cleanup. Agent Network currently supports free private services; paid rentals are not enabled.
+Native plugins require explicit trust for full computer and application access. Their renderer UI is sandboxed; native code is not isolated by its manifest.

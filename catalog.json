@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.3",
-  "sequence": 8,
-  "generatedAt": "2026-10-31T00:00:25.577Z",
-  "expiresAt": "2027-10-31T00:00:25.577Z",
+  "version": "0.3.4",
+  "sequence": 9,
+  "generatedAt": "2026-10-31T00:33:59.708Z",
+  "expiresAt": "2027-10-31T00:33:59.708Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -252,14 +252,14 @@
       "id": "kai.koinos-node",
       "name": "KAI Koinos Node",
       "description": "The complete Koinos Node workspace: wallet, funding, block production, external signing, quick sync, recovery and reward history.",
-      "version": "0.3.3",
+      "version": "0.3.4",
       "apiVersion": 3,
       "minCoreVersion": "0.7.0",
       "repository": "therexdev/kai-plugin-koinos-node",
-      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v0.3.3/kai-plugin-koinos-node-0.3.3.kaiplugin",
+      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v0.3.4/kai-plugin-koinos-node-0.3.4.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "caf9cdccc7ab0247664a51173894b718fe32340b454e41c0e27ea8e573f48950",
+      "sha256": "231ad41a9ec59a4f01949e3694064024c9c989e8f1617896b3c5b442328de82d",
       "permissions": [
         "native.execute",
         "storage.read",
