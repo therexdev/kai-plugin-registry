@@ -1,9 +1,9 @@
-# KAI Foundation plugin catalog 0.3.5
+# KAI Foundation plugin catalog 0.3.6
 
-Updates Assistant, Brain, Connections, Workflows, Tools and Code to 0.3.1, and Koinos Node to 0.3.5. These seven updates require **KAI Core 0.7.3 or later** for shared styled dialogs. Update Core first.
+Updates Assistant and Connections to 0.3.2. Both retain their Core 0.7.3 minimum; the other nine plugin entries remain unchanged.
 
-Confirmations, alerts and application popups follow Core’s typography, colors and controls. Asynchronous reviews preserve cancellation; workflow navigation keeps unsaved drafts until reviewed, and reused run-budget dialogs cannot inherit earlier approvals. Node includes the 0.3.4 repair for generated configuration copied from read-only templates. Completed chain migration does not need to be repeated.
+Assistant fixes Windows launch failures reporting “Plugin code contains an unverified file” after voice or turn detection had run. Native engines find existing runtime libraries without copying DLLs into the signed package, and local speech-model reads no longer create filesystem caches there. Updating installs a freshly verified code snapshot and keeps Assistant data in its existing folder. Unknown files in earlier snapshots are not deleted or trusted.
 
-The other four plugin entries retain their existing packages, publisher pins and Core 0.7.0 minimum. Plugin saved-data locations stay unchanged. Refreshing the catalog does not install updates or migrate data.
+Connections checks managed-service availability before account sign-in. Signed-out users see the sign-in action, failed availability checks offer a retry, and connecting apps still uses Core’s authenticated broker. Saved connections are preserved.
 
-Catalog sequence 10 pins the exact signed packages. The archived legacy registry.json remains byte-for-byte unchanged. Native plugins require full computer and application trust; their renderer UI remains sandboxed.
+Catalog sequence 11 pins the exact reviewed packages. The archived legacy registry.json remains byte-for-byte unchanged. Refreshing the catalog does not install updates or migrate data. Native plugins require full computer/application trust; their renderer UI remains sandboxed.
