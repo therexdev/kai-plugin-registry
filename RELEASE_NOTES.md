@@ -1,5 +1,3 @@
-# KAI Plugin Registry 0.3.11
+# Registry 0.3.12
 
-Updates **Master KAI Koinos Node** to **0.1.1**, fixing the disabled signing-key registration button after wallet import. The button opens the plugin Wallet when unlocking is required, updates immediately after unlock, and prevents duplicate requests while registration approval is pending.
-
-All other plugin entries and the archived legacy catalog remain unchanged. The Master plugin retains its existing publisher and minimum Core version of 0.7.3.
+Adds Teleno Koinos Node 1.0.0 as a Community alternative: its own wallet and node data, Teleno 1.3.0 runtime, seven management pages, and explicit platform and feature differences. This ID is deliberately absent from official branding pins. Existing plugin pins are unchanged.

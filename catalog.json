@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.11",
-  "sequence": 16,
-  "generatedAt": "2026-10-31T20:23:48.780Z",
-  "expiresAt": "2027-10-31T20:23:48.780Z",
+  "version": "0.3.12",
+  "sequence": 17,
+  "generatedAt": "2026-11-01T05:20:16.917Z",
+  "expiresAt": "2027-11-01T05:20:16.917Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -311,6 +311,26 @@
         "desktop.windows",
         "desktop.preferences",
         "desktop.navigate"
+      ]
+    },
+    {
+      "id": "community.teleno-node",
+      "name": "Teleno Koinos Node",
+      "description": "Community alternative powered by Teleno 1.3.0: one Koinos-compatible process instead of the legacy service stack. Native Linux x64 or one Docker container on x64 Windows/macOS/Linux. Separate encrypted wallet, observer/producer controls, native backups and logs. No Alpha database import, bridge funding or automatic reward reburning. Upstream ARM/Pi runtime unavailable.",
+      "version": "1.0.0",
+      "apiVersion": 3,
+      "minCoreVersion": "0.7.3",
+      "repository": "therexdev/kai-plugin-koinos-node",
+      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.0.0/kai-plugin-teleno-node-1.0.0.kaiplugin",
+      "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
+      "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
+      "sha256": "3dffb7abfff60c568b0256e52b062efd57eb3214c82b367ecab2235b21f8d283",
+      "permissions": [
+        "native.execute",
+        "storage.read",
+        "storage.write",
+        "desktop.windows",
+        "desktop.preferences"
       ]
     }
   ]
