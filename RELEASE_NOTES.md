@@ -1,4 +1,12 @@
-# KAI Plugin Registry 0.3.16
+# KAI Plugin Registry 0.3.17
+
+Updates KAI Koinos Node to 0.3.9 with a reviewed Alpha node migration dialog. Users can select chain data, producer address/custody and network RPC settings, the existing block-signing key, and an optional encrypted local wallet. Original files are retained, existing destination wallets and keys are protected, and production remains off until the imported setup is verified.
+
+External custody keeps the cold spending key on its signing device. Active signer sessions, pending transactions and custom Docker overrides are not imported. The update includes translated migration choices and recovery/identity checks.
+
+Only the regular Koinos Node listing changes. Master KAI Koinos Node remains at 0.1.5; all other plugin listings and the immutable legacy catalog remain unchanged. Requires Core 0.7.17 or newer.
+
+## Previous release: 0.3.16
 
 Publishes translation fixes for Koinos Node, Assistant, Connections, Brain, Workflows, Agent Network, Tools and Remote Access. Menus, dialogs and dynamic status text now follow the language saved in Core, including live changes to open views. The Assistant desktop companion serves its offline catalogs too. User names, drafts, model output, code, keys and addresses remain literal.
 
