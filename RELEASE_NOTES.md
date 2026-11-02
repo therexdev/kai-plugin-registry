@@ -1,3 +1,9 @@
+# Registry 0.3.15
+
+Updates Master KAI Koinos Node to 0.1.4 to keep blockchain RPC available when its producer cache grows or cannot open. Endpoint startup and save errors remain visible. The package retains its established publisher, permissions, Core 0.7.17 requirement, shared language setting and distribution safeguards.
+
+The catalog pins the exact signed package with sequence 20. Other plugin entries are unchanged.
+
 # Registry 0.3.14
 
 Updates all 13 listed plugins to follow the language saved in KAI Core Settings: English, Spanish, Brazilian Portuguese, French and German. First launch, saved preferences and live language changes are owned by Core; plugin user content remains literal. These signed plugin versions require Core 0.7.17 or newer.
