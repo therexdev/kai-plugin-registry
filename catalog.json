@@ -259,7 +259,7 @@
       "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v0.3.9/kai-plugin-koinos-node-0.3.9.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "01417ddf9fea0d71bf0c6a61241ab9f026657c643ff4eff124ec53c8b9bbc981",
+      "sha256": "f89d4b6689ed0a9fc98edd5af5ac3fefb5225867d6eacf3b58ba6db9bc32a049",
       "permissions": [
         "native.execute",
         "storage.read",
