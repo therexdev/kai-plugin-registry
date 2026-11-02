@@ -1,19 +1,17 @@
-# Registry 0.3.15
+# KAI Plugin Registry 0.3.16
 
-Updates Master KAI Koinos Node to 0.1.4 to keep blockchain RPC available when its producer cache grows or cannot open. Endpoint startup and save errors remain visible. The package retains its established publisher, permissions, Core 0.7.17 requirement, shared language setting and distribution safeguards.
+Publishes translation fixes for Koinos Node, Assistant, Connections, Brain, Workflows, Agent Network, Tools and Remote Access. Menus, dialogs and dynamic status text now follow the language saved in Core, including live changes to open views. The Assistant desktop companion serves its offline catalogs too. User names, drafts, model output, code, keys and addresses remain literal.
 
-The catalog pins the exact signed package with sequence 20. Other plugin entries are unchanged.
+The shared Node fixes also ship in Master KAI Koinos Node 0.1.5, retaining the 0.1.4 Node API startup and large-cache fixes. Core 0.7.17 or newer is required.
 
-# Registry 0.3.14
+- KAI Koinos Node 0.3.8
+- KAI Connections 0.3.5
+- Brain 0.3.4
+- Workflows 0.3.4
+- Agent Network 0.3.3
+- KAI Tools 0.3.3
+- KAI Remote Access 0.3.2
+- Master KAI Koinos Node 0.1.5
+- KAI Assistant 0.3.5
 
-Updates all 13 listed plugins to follow the language saved in KAI Core Settings: English, Spanish, Brazilian Portuguese, French and German. First launch, saved preferences and live language changes are owned by Core; plugin user content remains literal. These signed plugin versions require Core 0.7.17 or newer.
-
-Every package retains its established publisher and permissions. The catalog pins the exact verified package digests and immutable release URLs, with sequence 19.
-
-# Registry 0.3.13
-
-Updates Master KAI Koinos Node to 0.1.2 with distribution preparation recovery, read-only RPC timeout failover, and saved transaction identity before submission. Existing unknown transactions without an ID remain blocked for review. The package retains its established publisher and permissions.
-
-# Registry 0.3.12
-
-Adds Teleno Koinos Node 1.0.0 as a Community alternative: its own wallet and node data, Teleno 1.3.0 runtime, seven management pages, and explicit platform and feature differences. This ID is deliberately absent from official branding pins. Existing plugin pins are unchanged.
+All nine publisher signatures and exact package pins were verified. Plugin tests and Windows, macOS and Linux release checks passed, including native companion and Master Node integration tests. The catalog retains the other four entries and the immutable legacy asset.

@@ -1,6 +1,6 @@
 {
   "name": "kai-plugin-registry",
-  "version": "0.3.15",
+  "version": "0.3.16",
   "private": true,
   "description": "Signed curated catalog for KAI Core plugins",
   "license": "MIT",
