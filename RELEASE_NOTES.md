@@ -1,3 +1,11 @@
+# KAI Plugin Registry 0.3.19
+
+Updates KAI Koinos Node to 0.3.10 to fix Windows `EPERM` when moving chain data to an existing empty folder selected in the folder picker. The verified copy replaces only an empty real directory; files added during copying are protected and failed switches retain the original chain and saved location.
+
+Users can update the existing Koinos Node plugin and retry their chosen destination folder. Requires Core 0.7.17 or newer. Other plugin entries and the immutable legacy catalog are unchanged.
+
+## Previous release
+
 # KAI Plugin Registry 0.3.18
 
 Updates Master KAI Koinos Node to 0.1.6. Its dashboard reads recent confirmed rewards directly from the local chain, shows the checked block range and net profit, and labels delayed indexed history. Overlapping history entries are removed without changing distribution or Reward returns accounting.
