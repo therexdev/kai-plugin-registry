@@ -1,3 +1,13 @@
+# KAI Plugin Registry 0.3.18
+
+Updates Master KAI Koinos Node to 0.1.6. Its dashboard reads recent confirmed rewards directly from the local chain, shows the checked block range and net profit, and labels delayed indexed history. Overlapping history entries are removed without changing distribution or Reward returns accounting.
+
+The existing Master Node plugin receives this as a normal update using the same plugin ID and publisher. The signed package passed 366 tests and native integration checks on Windows, macOS and Linux. Requires Core 0.7.17 or newer.
+
+All other plugin entries and the immutable legacy catalog are retained.
+
+## Previous release
+
 # KAI Plugin Registry 0.3.17
 
 Updates KAI Koinos Node to 0.3.9 with a reviewed Alpha node migration dialog. Users can select chain data, producer address/custody and network RPC settings, the existing block-signing key, and an optional encrypted local wallet. Original files are retained, existing destination wallets and keys are protected, and production remains off until the imported setup is verified.
