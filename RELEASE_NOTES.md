@@ -1,3 +1,7 @@
+# 0.3.20 — Master Node Airdrops
+
+Update Master KAI Koinos Node to signed version 0.1.7, adding reviewed KOIN/VHP airdrops with equal splits or per-wallet amounts, durable payment tracking and CSV reports. The existing publisher identity and Core 0.7.17 minimum remain unchanged. Other catalog entries and the archived legacy catalog are unchanged.
+
 # KAI Plugin Registry 0.3.19
 
 Updates KAI Koinos Node to 0.3.10 to fix Windows `EPERM` when moving chain data to an existing empty folder selected in the folder picker. The verified copy replaces only an empty real directory; files added during copying are protected and failed switches retain the original chain and saved location.
