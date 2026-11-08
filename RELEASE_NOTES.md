@@ -1,3 +1,9 @@
+# 0.3.21 — Master Node RPC readiness and index recovery
+
+Updates Master KAI Koinos Node to signed version 0.1.8. The API root, `/rpc` and `/v1/status` report blockchain RPC readiness independently of producer-history indexing, with separate producer coverage and errors. Expired producer checkpoints rebuild from the current finalized window while missing current-window blocks continue to prevent producer readiness.
+
+The existing publisher identity and Core 0.7.17 minimum remain unchanged. Other catalog entries and the archived legacy catalog are unchanged. This update does not repair missing historical database records or establish the cause of the earlier Cloudflare 502.
+
 # 0.3.20 — Master Node Airdrops
 
 Update Master KAI Koinos Node to signed version 0.1.7, adding reviewed KOIN/VHP airdrops with equal splits or per-wallet amounts, durable payment tracking and CSV reports. The existing publisher identity and Core 0.7.17 minimum remain unchanged. Other catalog entries and the archived legacy catalog are unchanged.

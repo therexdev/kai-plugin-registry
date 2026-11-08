@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.20",
-  "sequence": 25,
-  "generatedAt": "2026-11-06T03:49:53.900Z",
-  "expiresAt": "2027-11-06T03:49:53.900Z",
+  "version": "0.3.21",
+  "sequence": 26,
+  "generatedAt": "2026-11-08T16:52:24.623Z",
+  "expiresAt": "2027-11-08T16:52:24.623Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -296,14 +296,14 @@
       "id": "kai.master-kai-koinos-node",
       "name": "Master KAI Koinos Node",
       "description": "Developer node workspace with the full Master Node dashboard, wallet, block production, Node API and community distribution.",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "apiVersion": 3,
       "minCoreVersion": "0.7.17",
       "repository": "therexdev/kai-plugin-master-kai-koinos-node",
-      "url": "https://github.com/therexdev/kai-plugin-master-kai-koinos-node/releases/download/v0.1.7/kai-plugin-master-kai-koinos-node-0.1.7.kaiplugin",
+      "url": "https://github.com/therexdev/kai-plugin-master-kai-koinos-node/releases/download/v0.1.8/kai-plugin-master-kai-koinos-node-0.1.8.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "5105f2614254ea5211cafa1b0e34dad53e64a1a938fe5e35880093d64e0b6f9a",
+      "sha256": "b7a1b53a49740ff6cbf5e077ec1904354cce57872946d81e01e4d663bf91f520",
       "permissions": [
         "native.execute",
         "storage.read",
