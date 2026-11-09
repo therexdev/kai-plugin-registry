@@ -1,3 +1,9 @@
+# 0.3.22 — Workflow JSON sharing and KAI network agents
+
+Updates Workflows to signed version 0.3.5 with file or pasted-JSON import, visible JSON exports, and starter workflows. Agent steps, Copilot and Discover support local models and KAI network models, including network-only and mixed workflows.
+
+Network requests use Core credits with a cost estimate and review for each request. The update adds inference.network and wallet.authorize permissions. The existing publisher identity and Core 0.7.17 minimum remain unchanged. Other catalog entries and the archived legacy catalog are unchanged.
+
 # 0.3.21 — Master Node RPC readiness and index recovery
 
 Updates Master KAI Koinos Node to signed version 0.1.8. The API root, `/rpc` and `/v1/status` report blockchain RPC readiness independently of producer-history indexing, with separate producer coverage and errors. Expired producer checkpoints rebuild from the current finalized window while missing current-window blocks continue to prevent producer readiness.
