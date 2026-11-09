@@ -1,4 +1,10 @@
-# KAI Plugin Registry 0.3.23
+# KAI Plugin Registry 0.3.24
+
+Publishes Workflows 0.3.7 with Core-owned **Allow for Workflow** and **Allow Always** credit access. Ongoing permissions can be revoked in **Core Settings → Access**. The catalog now requires Core 0.7.23 for this Workflows update.
+
+Catalog sequence 29. Publisher identity and manifest permissions are unchanged. Other plugin entries and the immutable legacy catalog are unchanged.
+
+## Previous release: 0.3.23
 
 Publishes Workflows 0.3.6 in the in-app catalog. It adds an importable researched-article workflow, public source retrieval, automatic task-specific selection among eligible online network models, bounded reviewed continuations, and full article outputs. Publisher identity, minimum Core version and requested permissions are unchanged.
 
