@@ -1,4 +1,10 @@
-# KAI Plugin Registry 0.3.25
+# KAI Plugin Registry 0.3.26
+
+Publishes Workflows 0.3.9, fixing the three-minute cutoff across multiple network continuation replies. Each reply gets the configured timeout, while the full response stays bounded to 15 minutes. Completed parts and credit recovery are preserved, and run history names actual timeout failures.
+
+Catalog sequence 31. Requires Core 0.7.24; publisher identity, permissions and all other entries are unchanged. Existing article imports need no edits. Finish or cancel any active run before updating Workflows.
+
+## Previous release: 0.3.25
 
 Publishes Workflows 0.3.8 with safe automatic model fallback for research, outline and writing tasks. Requires Core 0.7.24, which refreshes expired model observations and identifies failures that occurred before generation started. Existing article workflow imports need no changes.
 
