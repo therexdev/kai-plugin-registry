@@ -60,7 +60,12 @@ test("temporary release errors retry from the pinned URL and discard failed down
   const result = await fetchReleaseFile(url, 1024);
   try {
     assert.equal(fs.readFileSync(result.file, "utf8"), "verified later");
-    assert.deepEqual(calls.map(c => c.url), [url, url, "https://release-assets.githubusercontent.com/retried-asset"]);
+    assert.equal(calls[0].url, url);
+    const retry = new URL(calls[1].url), pinned = new URL(url);
+    assert.equal(retry.origin, pinned.origin); assert.equal(retry.pathname, pinned.pathname);
+    assert.ok(retry.searchParams.get("kai_registry_retry"));
+    assert.equal(calls[2].url, "https://release-assets.githubusercontent.com/retried-asset");
+    assert.equal(calls[1].headers["cache-control"], "no-cache"); assert.equal(calls[2].headers["cache-control"], "no-cache");
     assert.equal(roots.length, 2); assert.equal(fs.existsSync(roots[0]), false);
   } finally { result.dispose(); }
   assert.ok(roots.every(root => !fs.existsSync(root)));
