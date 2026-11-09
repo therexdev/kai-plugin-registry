@@ -46,7 +46,7 @@ npm run verify
 npm run verify:online
 ```
 
-The first two commands validate metadata, policy, signatures and exact catalog/source equality, plus the unchanged legacy asset checksum. Online verification also fetches each listed immutable asset and checks the publisher signature and all pinned metadata. It sends no credentials and permits only GitHub release-asset hosts and their supported redirects. Foundation downloads stream into temporary files, and verification computes decoded file hashes with a bounded-memory JSON reader; even large native packages are neither loaded as one JSON object nor executed. Temporary downloads and review directories are removed after verification. The adapted Core reader/verifier snapshots have their own provenance hashes beside the source files.
+The first two commands validate metadata, policy, signatures and exact catalog/source equality, plus the unchanged legacy asset checksum. Online verification also fetches each listed immutable asset and checks the publisher signature and all pinned metadata. It sends no credentials and permits only GitHub release-asset hosts and their supported redirects. Temporary transport errors receive at most two retries within the original download deadline; invalid URLs, size violations and signature failures are never retried. Foundation downloads stream into temporary files, and verification computes decoded file hashes with a bounded-memory JSON reader; even large native packages are neither loaded as one JSON object nor executed. Temporary downloads and review directories are removed after verification. The adapted Core reader/verifier snapshots have their own provenance hashes beside the source files.
 
 For a new Foundation catalog:
 

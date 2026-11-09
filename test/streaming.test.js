@@ -52,6 +52,27 @@ test("release downloader denies oversized responses and unapproved redirects", a
   await assert.rejects(fetchReleaseFile(url, 10), /404/);
   await assert.rejects(fetchReleaseFile(url, 0), /byte limit/);
 });
+test("temporary release errors retry from the pinned URL and discard failed download directories", async t => {
+  const original = fs.mkdtempSync, roots = [];
+  t.mock.method(fs, "mkdtempSync", (...args) => { const root = original(...args); roots.push(root); return root; });
+  const url = "https://github.com/example/plugin/releases/download/v1.0.0/a.kaiplugin";
+  const calls = mockRequests(t, [{ status: 504 }, { status: 302, headers: { location: "https://release-assets.githubusercontent.com/retried-asset" } }, { chunks: [Buffer.from("verified later")] }]);
+  const result = await fetchReleaseFile(url, 1024);
+  try {
+    assert.equal(fs.readFileSync(result.file, "utf8"), "verified later");
+    assert.deepEqual(calls.map(c => c.url), [url, url, "https://release-assets.githubusercontent.com/retried-asset"]);
+    assert.equal(roots.length, 2); assert.equal(fs.existsSync(roots[0]), false);
+  } finally { result.dispose(); }
+  assert.ok(roots.every(root => !fs.existsSync(root)));
+});
+test("release retries are bounded and cancellation during backoff never dispatches again", async t => {
+  const url = "https://github.com/example/plugin/releases/download/v1.0.0/a.kaiplugin";
+  const calls = mockRequests(t, [{ status: 503 }, { status: 503 }, { status: 503 }, { status: 504 }]);
+  await assert.rejects(fetchReleaseFile(url, 1024), /503/); assert.equal(calls.length, 3);
+  const controller = new AbortController(), pending = fetchReleaseFile(url, 1024, controller.signal);
+  await new Promise(setImmediate); controller.abort();
+  await assert.rejects(pending, /abort/i); assert.equal(calls.length, 4);
+});
 test("vendored streaming reader and verifier match their recorded provenance", () => {
   for (const name of ["package-file", "package-file-verifier"]) {
     const provenance = require(`../lib/${name}.provenance.json`), bytes = fs.readFileSync(path.join(__dirname, `../lib/${name}.js`));
