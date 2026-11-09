@@ -1,3 +1,11 @@
+# KAI Plugin Registry 0.3.23
+
+Publishes Workflows 0.3.6 in the in-app catalog. It adds an importable researched-article workflow, public source retrieval, automatic task-specific selection among eligible online network models, bounded reviewed continuations, and full article outputs. Publisher identity, minimum Core version and requested permissions are unchanged.
+
+Catalog sequence 28. Other plugin entries and the immutable legacy catalog remain unchanged.
+
+## Previous release
+
 # 0.3.22 — Workflow JSON sharing and KAI network agents
 
 Updates Workflows to signed version 0.3.5 with file or pasted-JSON import, visible JSON exports, and starter workflows. Agent steps, Copilot and Discover support local models and KAI network models, including network-only and mixed workflows.
