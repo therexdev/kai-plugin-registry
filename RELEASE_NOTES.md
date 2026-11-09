@@ -1,4 +1,10 @@
-# KAI Plugin Registry 0.3.24
+# KAI Plugin Registry 0.3.25
+
+Publishes Workflows 0.3.8 with safe automatic model fallback for research, outline and writing tasks. Requires Core 0.7.24, which refreshes expired model observations and identifies failures that occurred before generation started. Existing article workflow imports need no changes.
+
+Catalog sequence 30. The established publisher, permissions, other plugin entries and immutable legacy catalog are unchanged. Update Core and restart it before updating Workflows, then choose Run again in Workflows → Run history.
+
+## Previous release: 0.3.24
 
 Publishes Workflows 0.3.7 with Core-owned **Allow for Workflow** and **Allow Always** credit access. Ongoing permissions can be revoked in **Core Settings → Access**. The catalog now requires Core 0.7.23 for this Workflows update.
 
