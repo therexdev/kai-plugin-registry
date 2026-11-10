@@ -1,4 +1,10 @@
-# KAI Plugin Registry 0.3.27
+# KAI Plugin Registry 0.3.28
+
+Publishes Workflows 0.3.11 with configurable primary models and ordered fallback lists. The three task-specific Auto choices are removed; existing definitions migrate to explicit editable lists. Workflow settings and individual Agent nodes support local/network choices, order controls and JSON transfer. Generation-limit errors distinguish output budgets, continuation counts and empty unfinished replies.
+
+Catalog sequence 33. Requires Core 0.7.25. Existing workflows need no reimport. Publisher identity and permissions are unchanged; all other entries and the immutable legacy catalog are preserved.
+
+## Previous release: 0.3.27
 
 Publishes Workflows 0.3.10 with working run-dialog feedback, typed article inputs and retries that restore the selected run’s input. Start errors remain visible, history refreshes preserve open forms, and duplicate submissions are blocked while starting.
 
