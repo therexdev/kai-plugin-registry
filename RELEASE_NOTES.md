@@ -1,4 +1,10 @@
-# KAI Plugin Registry 0.3.26
+# KAI Plugin Registry 0.3.27
+
+Publishes Workflows 0.3.10 with working run-dialog feedback, typed article inputs and retries that restore the selected run’s input. Start errors remain visible, history refreshes preserve open forms, and duplicate submissions are blocked while starting.
+
+Catalog sequence 32. Requires Core 0.7.25 for the network transport fix. Existing workflows need no reimport. Publisher identity and permissions are unchanged; all other entries and the immutable legacy catalog are preserved.
+
+## Previous release: 0.3.26
 
 Publishes Workflows 0.3.9, fixing the three-minute cutoff across multiple network continuation replies. Each reply gets the configured timeout, while the full response stays bounded to 15 minutes. Completed parts and credit recovery are preserved, and run history names actual timeout failures.
 
