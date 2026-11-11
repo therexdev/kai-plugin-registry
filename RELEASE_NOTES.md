@@ -1,4 +1,12 @@
-# KAI Plugin Registry 0.3.28
+# KAI Plugin Registry 0.3.29
+
+Publishes Workflows 0.3.12 with one model picker and separate **Local only / Network only / Local and network** controls for primary and ordered fallback models. When both locations are allowed, choose **Local first** or **Network first**. Agent overrides, Copilot, discovery and JSON transfers retain those choices.
+
+A continuation can use the next configured location or model when Core confirms the new request never started, carrying forward accepted text and the remaining output budget. Model results identifies local and network parts. Existing workflows keep their current source choices and run history; no reimport is needed. Article Agent overrides must be edited individually or set to inherit the workflow model order. Local means this computer, not another device on the same account.
+
+Catalog sequence 34. Requires Core 0.7.25; Core 0.7.27 is recommended for transient network-check retries. Publisher identity, permissions, other catalog entries and the immutable legacy catalog are preserved. All 100 plugin tests, native UI checks and exact signed-package verification pass; no live paid inference was run.
+
+## Previous release: 0.3.28
 
 Publishes Workflows 0.3.11 with configurable primary models and ordered fallback lists. The three task-specific Auto choices are removed; existing definitions migrate to explicit editable lists. Workflow settings and individual Agent nodes support local/network choices, order controls and JSON transfer. Generation-limit errors distinguish output budgets, continuation counts and empty unfinished replies.
 
