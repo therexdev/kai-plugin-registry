@@ -1,3 +1,9 @@
+# KAI plugin catalog 0.3.32
+
+Catalog sequence 37 publishes Workflows 0.3.15. JSON Agents can locally correct bounded missing-container punctuation after full schema validation. Explicit retry can reuse an already paid, recoverable outline from the failed attempt. Original replies and receipts remain available. The update also preserves search-question intent and pairs DuckDuckGo snippets with the correct result titles. Core 0.7.28 remains the minimum; no newer Core release is required.
+
+Other plugin entries and publisher pins are unchanged. Older release assets remain immutable.
+
 # KAI plugin catalog 0.3.31
 
 Catalog sequence 36 publishes Workflows 0.3.14 with bounded ten-minute model replies, explicit retry of failed model/research work that preserves completed sections, and topic-focused source filtering. Requires Core 0.7.28: update and restart Core first to remove its separate three-minute plugin inference cutoff. Existing recognized article definitions upgrade without reimporting. Retries may need additional credits; provider availability and content quality are not guaranteed.
