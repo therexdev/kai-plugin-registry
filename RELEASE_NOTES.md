@@ -1,3 +1,9 @@
+# KAI plugin catalog 0.3.31
+
+Catalog sequence 36 publishes Workflows 0.3.14 with bounded ten-minute model replies, explicit retry of failed model/research work that preserves completed sections, and topic-focused source filtering. Requires Core 0.7.28: update and restart Core first to remove its separate three-minute plugin inference cutoff. Existing recognized article definitions upgrade without reimporting. Retries may need additional credits; provider availability and content quality are not guaranteed.
+
+Other plugin entries and publisher pins are unchanged. Previously published catalog assets remain immutable.
+
 # KAI Plugin Registry 0.3.30
 
 Publishes Workflows 0.3.13 with validated JSON Agent output and bounded continuation/repair when a model ends an outline mid-document. JSON steps complete only after parsing and matching their configured schema; original imported article planners automatically gain a contract for the requested section count. The model policy, credit consent, total output budget, saved raw responses and historical runs remain intact.
