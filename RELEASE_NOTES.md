@@ -1,3 +1,7 @@
+# KAI Plugin Registry 0.3.35
+
+Publishes Workflows 0.3.18 with reusable Quality Check rules, verified text continuation boundaries, JSON-fragment recovery and the AIO reviewed article template. Import the new template to adopt its editorial pipeline; existing customized workflows are preserved. Requires Core 0.7.28 or later. Catalog sequence 40; all 12 other plugin entries and the immutable legacy catalog remain unchanged.
+
 # KAI Plugin Registry 0.3.34
 
 Publishes Workflows 0.3.17 with grouped article citation handling and corrected body word counts. Existing shipped article collectors migrate without reimport; customized collectors and past runs are preserved. Core 0.7.28 or newer is required. All 12 other plugin entries and the immutable legacy catalog remain unchanged.
