@@ -1,3 +1,7 @@
+# KAI Plugin Registry 0.3.34
+
+Publishes Workflows 0.3.17 with grouped article citation handling and corrected body word counts. Existing shipped article collectors migrate without reimport; customized collectors and past runs are preserved. Core 0.7.28 or newer is required. All 12 other plugin entries and the immutable legacy catalog remain unchanged.
+
 # Catalog 0.3.33
 
 Publishes Workflows 0.3.16 with recovery of verified partial replies from terminal network jobs. It retains the original reply, continues within existing step limits, and uses the selected fallback order. Core 0.7.28 remains the minimum; the other 12 plugin entries and legacy registry are unchanged.
