@@ -1,3 +1,7 @@
+# Catalog 0.3.33
+
+Publishes Workflows 0.3.16 with recovery of verified partial replies from terminal network jobs. It retains the original reply, continues within existing step limits, and uses the selected fallback order. Core 0.7.28 remains the minimum; the other 12 plugin entries and legacy registry are unchanged.
+
 # KAI plugin catalog 0.3.32
 
 Catalog sequence 37 publishes Workflows 0.3.15. JSON Agents can locally correct bounded missing-container punctuation after full schema validation. Explicit retry can reuse an already paid, recoverable outline from the failed attempt. Original replies and receipts remain available. The update also preserves search-question intent and pairs DuckDuckGo snippets with the correct result titles. Core 0.7.28 remains the minimum; no newer Core release is required.
