@@ -1,4 +1,10 @@
-# KAI Plugin Registry 0.3.29
+# KAI Plugin Registry 0.3.30
+
+Publishes Workflows 0.3.13 with validated JSON Agent output and bounded continuation/repair when a model ends an outline mid-document. JSON steps complete only after parsing and matching their configured schema; original imported article planners automatically gain a contract for the requested section count. The model policy, credit consent, total output budget, saved raw responses and historical runs remain intact.
+
+Catalog sequence 35. Core 0.7.25+; no new Core/backend deployment is required. The established publisher identity, permissions, all other entries and immutable legacy catalog are preserved. Workflows validation includes 112 plugin tests, 11 native Core checks, replay of the reported Gemma truncation and a simulated complete 800-word article. No live paid inference was run.
+
+## Previous release: KAI Plugin Registry 0.3.29
 
 Publishes Workflows 0.3.12 with one model picker and separate **Local only / Network only / Local and network** controls for primary and ordered fallback models. When both locations are allowed, choose **Local first** or **Network first**. Agent overrides, Copilot, discovery and JSON transfers retain those choices.
 
