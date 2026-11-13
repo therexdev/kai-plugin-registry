@@ -1,3 +1,9 @@
+# KAI Plugin Registry 0.3.41
+
+Publishes Teleno Koinos Node 1.1.3 with a complete front-page guide for runtime setup, wallet creation and backup, signing key, observer sync, funding, registration and production. Completed steps collapse, and an observer-only option skips wallet and production setup. Pending transactions are checked automatically without signing or resubmitting, and confirmed or reverted results remain visible independently of account history. Requires Core 0.7.17 or later; no Core update is needed.
+
+Catalog sequence 46. All 12 other plugin entries, publisher identities, permissions and the immutable legacy catalog are unchanged.
+
 # KAI Plugin Registry 0.3.40
 
 Publishes Teleno Koinos Node 1.1.2 with an ordered setup guide at the top of Overview. Set up WSL2 reopens an already installed Ubuntu distribution after interrupted first-launch setup, preserving its files. Windows checks Ubuntu before enabling installation; the guide disappears after the runtime is verified and Start observer becomes the main action. Includes retryable downloads and the preserving switch for existing Docker profiles. Requires Core 0.7.17 or later; no new Core release is needed.

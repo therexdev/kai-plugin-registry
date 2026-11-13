@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.40",
-  "sequence": 45,
-  "generatedAt": "2026-11-13T17:34:27.637Z",
-  "expiresAt": "2027-11-13T17:34:27.637Z",
+  "version": "0.3.41",
+  "sequence": 46,
+  "generatedAt": "2026-11-13T18:37:56.249Z",
+  "expiresAt": "2027-11-13T18:37:56.249Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -319,14 +319,14 @@
       "id": "community.teleno-node",
       "name": "Teleno Koinos Node",
       "description": "Full upstream Teleno 1.3.0 node: native Linux x64 and Docker-free Windows through WSL2. Separate encrypted wallet, observer and block producer, local JSON-RPC and optional gRPC, native snapshots and public bootstrap. Existing Docker installations can copy their Teleno data into WSL2. No supported upstream ARM/Pi artifact.",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "apiVersion": 3,
       "minCoreVersion": "0.7.17",
       "repository": "therexdev/kai-plugin-koinos-node",
-      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.1.2/kai-plugin-teleno-node-1.1.2.kaiplugin",
+      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.1.3/kai-plugin-teleno-node-1.1.3.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "295670f26f7a37ff1d0e718e7e4951dc1553a6aa0985965b794b7c4a2af6b366",
+      "sha256": "4affdab4b7ef8ce9d3726c46d68aa918b957de6c903ebf42a2cfcae08220be04",
       "permissions": [
         "native.execute",
         "storage.read",
