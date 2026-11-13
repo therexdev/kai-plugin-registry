@@ -1,3 +1,9 @@
+# KAI Plugin Registry 0.3.40
+
+Publishes Teleno Koinos Node 1.1.2 with an ordered setup guide at the top of Overview. Set up WSL2 reopens an already installed Ubuntu distribution after interrupted first-launch setup, preserving its files. Windows checks Ubuntu before enabling installation; the guide disappears after the runtime is verified and Start observer becomes the main action. Includes retryable downloads and the preserving switch for existing Docker profiles. Requires Core 0.7.17 or later; no new Core release is needed.
+
+Catalog sequence 45. All 12 other plugin entries, publisher identities, permissions and the immutable legacy catalog are unchanged.
+
 # KAI Plugin Registry 0.3.39
 
 Publishes Workflows 0.3.21 with complete evidence passages, combined factual and editorial outline reviews, targeted revisions, and bounded JSON punctuation recovery. Update Workflows, then use Templates → AIO researched article or import the updated template to adopt the new workflow. Existing customized workflows are preserved. Requires Core 0.7.28 or later.
