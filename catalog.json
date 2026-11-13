@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.37",
-  "sequence": 42,
-  "generatedAt": "2026-11-13T01:08:16.304Z",
-  "expiresAt": "2027-11-13T01:08:16.304Z",
+  "version": "0.3.38",
+  "sequence": 43,
+  "generatedAt": "2026-11-13T16:14:01.375Z",
+  "expiresAt": "2027-11-13T16:14:01.375Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -318,15 +318,15 @@
     {
       "id": "community.teleno-node",
       "name": "Teleno Koinos Node",
-      "description": "Community alternative powered by Teleno 1.3.0: one Koinos-compatible process instead of the legacy service stack. Native Linux x64 or one Docker container on x64 Windows/macOS/Linux. Separate encrypted wallet, observer/producer controls, native backups and logs. No Alpha database import, bridge funding or automatic reward reburning. Upstream ARM/Pi runtime unavailable.",
-      "version": "1.0.1",
+      "description": "Full upstream Teleno 1.3.0 node: native Linux x64 and Docker-free Windows through WSL2. Separate encrypted wallet, observer and block producer, local JSON-RPC and optional gRPC, native snapshots and public bootstrap. Existing Docker installations can copy their Teleno data into WSL2. No supported upstream ARM/Pi artifact.",
+      "version": "1.1.0",
       "apiVersion": 3,
       "minCoreVersion": "0.7.17",
       "repository": "therexdev/kai-plugin-koinos-node",
-      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.0.1/kai-plugin-teleno-node-1.0.1.kaiplugin",
+      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.1.0/kai-plugin-teleno-node-1.1.0.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "cff0b2e8f36a103f21b71640b8ddfac084386cc1fbd65d055c57bd49ca648828",
+      "sha256": "496829770d2a8b001b36f416786b771e17a1b945bf273b2144632b44af316dcb",
       "permissions": [
         "native.execute",
         "storage.read",
