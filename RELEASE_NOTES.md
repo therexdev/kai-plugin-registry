@@ -1,3 +1,9 @@
+# KAI Plugin Registry 0.3.37
+
+Publishes Workflows 0.3.20 with section-specific source passages, independent claim audits, required word budgets, and corrected bounded revisions. Update Workflows, then import the new AIO researched article template to adopt the workflow changes. Existing customized workflows are preserved. Requires Core 0.7.28 or later.
+
+Catalog sequence 42. All 12 other plugin entries, publisher identities, permissions and the immutable legacy catalog are unchanged.
+
 # Registry 0.3.36
 
 Updates Workflows to 0.3.19 with strict JSON prefix recovery and small validated AIO outline and publishing tasks. Other plugin entries are unchanged. Requires Core 0.7.28 or later for Workflows.
