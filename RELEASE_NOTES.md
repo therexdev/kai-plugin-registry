@@ -1,3 +1,9 @@
+# KAI Plugin Registry 0.3.39
+
+Publishes Workflows 0.3.21 with complete evidence passages, combined factual and editorial outline reviews, targeted revisions, and bounded JSON punctuation recovery. Update Workflows, then use Templates → AIO researched article or import the updated template to adopt the new workflow. Existing customized workflows are preserved. Requires Core 0.7.28 or later.
+
+Catalog sequence 44. Preserves Teleno Koinos Node 1.1.0 from catalog 0.3.38 and all 12 other plugin entries, publisher identities, permissions and the immutable legacy catalog. Automated and native Core checks passed; a clean live 2,000-word article acceptance run remains unverified. The separate Core streaming-recovery change is not included.
+
 # KAI Plugin Registry 0.3.38
 
 Publishes Teleno Koinos Node 1.1.0 with the full upstream Teleno 1.3.0 executable running without Docker on Windows through WSL2 / Ubuntu 24.04. Includes guided setup, preserving data migration, optional local gRPC and native backup controls. Existing Windows profiles use **Switch to Docker-free runtime** after updating. Requires Core 0.7.17 or later; no new Core update is needed.
