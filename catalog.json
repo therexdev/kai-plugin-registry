@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.38",
-  "sequence": 43,
-  "generatedAt": "2026-11-13T16:14:01.375Z",
-  "expiresAt": "2027-11-13T16:14:01.375Z",
+  "version": "0.3.39",
+  "sequence": 44,
+  "generatedAt": "2026-11-13T16:26:21.647Z",
+  "expiresAt": "2027-11-13T16:26:21.647Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -97,14 +97,14 @@
       "id": "kai.workflows",
       "name": "Workflows",
       "description": "Build and run agents, graphs, schedules and event triggers with a self-contained workflow engine and private run history.",
-      "version": "0.3.20",
+      "version": "0.3.21",
       "apiVersion": 3,
       "minCoreVersion": "0.7.28",
       "repository": "therexdev/kai-plugin-workflows",
-      "url": "https://github.com/therexdev/kai-plugin-workflows/releases/download/v0.3.20/kai-plugin-workflows-0.3.20.kaiplugin",
+      "url": "https://github.com/therexdev/kai-plugin-workflows/releases/download/v0.3.21/kai-plugin-workflows-0.3.21.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "fa2c2f3e8b9e895f769f40f299220d38bc70c5250725d22522c6f8233cdeda91",
+      "sha256": "9f5d00dd54344768297fd7fd8a2c10c66d5acf27fee8218abf109c69aa5e6423",
       "permissions": [
         "native.execute",
         "models.read",
