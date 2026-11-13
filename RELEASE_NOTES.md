@@ -1,3 +1,9 @@
+# KAI Plugin Registry 0.3.42
+
+Publishes Teleno Koinos Node 1.1.4 with a live Backups progress panel, readable snapshot lists, exact-snapshot restore actions, and clear completion, cancellation and failure messages. Progress reports measured native bytes and stages, with speed and time estimates only when available. Requires Core 0.7.17 or later; no new Core release is needed.
+
+Catalog sequence 47. All 12 other plugin entries, publisher identities, permissions and the immutable legacy catalog are unchanged.
+
 # KAI Plugin Registry 0.3.41
 
 Publishes Teleno Koinos Node 1.1.3 with a complete front-page guide for runtime setup, wallet creation and backup, signing key, observer sync, funding, registration and production. Completed steps collapse, and an observer-only option skips wallet and production setup. Pending transactions are checked automatically without signing or resubmitting, and confirmed or reverted results remain visible independently of account history. Requires Core 0.7.17 or later; no Core update is needed.
