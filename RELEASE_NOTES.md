@@ -1,3 +1,11 @@
+# KAI Plugin Registry 0.3.38
+
+Publishes Workflows 0.3.21 with complete evidence passages, combined outline reviews, targeted corrections, bounded JSON recovery and recoverable discovery/Condition steps. Update Workflows, then import the revised AIO researched-article template to adopt the new graph. Existing saved workflows and history are preserved. Requires Core 0.7.28 or later.
+
+Automated and native checks passed; a clean complete live 2,000-word article remains unverified. The separate Core streaming-recovery change is not part of this plugin release.
+
+Catalog sequence 43. The other 12 plugin entries, publisher identities, permissions and immutable legacy catalog are unchanged.
+
 # KAI Plugin Registry 0.3.37
 
 Publishes Workflows 0.3.20 with section-specific source passages, independent claim audits, required word budgets, and corrected bounded revisions. Update Workflows, then import the new AIO researched article template to adopt the workflow changes. Existing customized workflows are preserved. Requires Core 0.7.28 or later.
