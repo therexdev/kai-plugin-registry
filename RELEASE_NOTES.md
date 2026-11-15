@@ -1,3 +1,9 @@
+# KAI Plugin Registry 0.3.43
+
+Publishes Teleno Koinos Node 1.1.5, fixing the “could not be cloned” confirmation error after transfers, burns and signing-key registration. Saved transactions are isolated from SDK helper functions and are checked again after reopening, without signing or resubmission. Requires Core 0.7.17 or later; no Core update is needed.
+
+Catalog sequence 48. All 12 other entries, publisher identities, permissions and the immutable legacy catalog are unchanged.
+
 # KAI Plugin Registry 0.3.42
 
 Publishes Teleno Koinos Node 1.1.4 with a live Backups progress panel, readable snapshot lists, exact-snapshot restore actions, and clear completion, cancellation and failure messages. Progress reports measured native bytes and stages, with speed and time estimates only when available. Requires Core 0.7.17 or later; no new Core release is needed.
