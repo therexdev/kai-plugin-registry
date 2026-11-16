@@ -1,3 +1,11 @@
+# KAI Plugin Registry 0.3.45
+
+Publishes Workflows 0.3.23. Distinct review findings remain available even when a model assigns the same ID to more than one finding, and targeted paragraph revisions respect the allowed word-count range while preserving unaffected paragraphs.
+
+Refresh the catalog, update Workflows, then import the updated AIO researched article · reviewed template to adopt the graph changes. Existing workflows and run history are preserved. Requires Core 0.7.28 or later.
+
+Catalog sequence 50. All 12 other plugin entries and immutable release assets are unchanged. All 203 Workflows tests and native/platform checks passed. The full live 2,000-word article test has not passed; content with unresolved quality findings remains Needs review.
+
 # KAI Plugin Registry 0.3.44
 
 Publishes Workflows 0.3.22 with scoped outline and paragraph revisions, actual remaining word budgets, citation checks, and preserved native quality rules. Update Workflows, then import the updated AIO researched-article template to adopt the graph changes. Existing saved workflows and run history are preserved. Requires Core 0.7.28 or later.
