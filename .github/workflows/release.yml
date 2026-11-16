@@ -40,6 +40,7 @@ jobs:
             cmp dist/registry-foundation.json "$RUNNER_TEMP/existing-registry/registry-foundation.json"
             cmp dist/registry.json "$RUNNER_TEMP/existing-registry/registry.json"
             echo "Existing immutable registry matches verified contents."
+            gh release edit "$tag" --notes-file RELEASE_NOTES.md
           else
             gh release create "$tag" dist/registry-foundation.json dist/registry.json --target "$GITHUB_SHA" --title "KAI Plugin Registry $version" --notes-file RELEASE_NOTES.md
           fi
