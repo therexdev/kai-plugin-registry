@@ -1,3 +1,9 @@
+# KAI Plugin Registry 0.3.44
+
+Publishes Workflows 0.3.22 with scoped outline and paragraph revisions, actual remaining word budgets, citation checks, and preserved native quality rules. Update Workflows, then import the updated AIO researched-article template to adopt the graph changes. Existing saved workflows and run history are preserved. Requires Core 0.7.28 or later.
+
+Catalog sequence 49. All other entries, publisher identities, permissions and immutable older catalogs are preserved. Content that does not pass the configured checks remains Needs review; generated article quality is not guaranteed.
+
 # KAI Plugin Registry 0.3.43
 
 Publishes Teleno Koinos Node 1.1.5, fixing the “could not be cloned” confirmation error after transfers, burns and signing-key registration. Saved transactions are isolated from SDK helper functions and are checked again after reopening, without signing or resubmission. Requires Core 0.7.17 or later; no Core update is needed.
