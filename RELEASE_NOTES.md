@@ -1,3 +1,9 @@
+# KAI Plugin Registry 0.3.46
+
+Publishes Remote Access 0.3.3 to fix Connecting remaining on screen after approval. The plugin uses supported Core network options for relay startup and streamed replies, retries failed handshakes, and shows connection failures clearly.
+
+Refresh the catalog and review the Remote Access update. Existing API keys and settings are preserved. Requires Core 0.7.17 or later. Catalog sequence 51; the other 12 plugin entries are unchanged.
+
 # KAI Plugin Registry 0.3.45
 
 Publishes Workflows 0.3.23. Distinct review findings remain available even when a model assigns the same ID to more than one finding, and targeted paragraph revisions respect the allowed word-count range while preserving unaffected paragraphs.
