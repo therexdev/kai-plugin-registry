@@ -1,3 +1,11 @@
+# KAI Plugin Registry 0.3.48
+
+Publishes Remote Access 0.3.4 with automatic context capability discovery for API clients and verified allocation metadata for local and relayed streams.
+
+Update KAI Core to 0.7.32 first, refresh the catalog, then update Remote Access. Install kai Android 0.4.16 for automatic discovery before chats and saved tasks. Existing API keys, connection addresses and saved data are retained. No model re-download or new API key is required.
+
+Catalog sequence 53. Remote Access now requires Core 0.7.32 in this catalog; the other 12 plugin entries and the immutable legacy catalog are unchanged. Prepaid-network context limits are unchanged.
+
 # KAI Plugin Registry 0.3.47
 
 Publishes Workflows 0.3.24 with two bounded QA passes per outline, section and publishing pack. After the second correction, the workflow saves the final edits and continues without a third model approval gate. Unresolved findings remain visible, while the outline and section verdicts no longer prevent the next stage from running.
