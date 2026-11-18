@@ -1,3 +1,11 @@
+# KAI Plugin Registry 0.3.47
+
+Publishes Workflows 0.3.24 with two bounded QA passes per outline, section and publishing pack. After the second correction, the workflow saves the final edits and continues without a third model approval gate. Unresolved findings remain visible, while the outline and section verdicts no longer prevent the next stage from running.
+
+Refresh the catalog, update Workflows, then import the updated AIO researched article · reviewed template. Existing workflows and run history are preserved. Use Workflows 0.3.24 for the increased 2,000-step, 500-frame and 96 MB encrypted-data allowances needed by longer revision runs. Complete saved records and the storage format are preserved. Requires Core 0.7.28 or later.
+
+Catalog sequence 52. All 12 other plugin entries and the immutable legacy catalog are unchanged. Completed output with warnings is not factual approval; provider errors retain their existing bounded recovery behavior.
+
 # KAI Plugin Registry 0.3.46
 
 Publishes Remote Access 0.3.3 to fix Connecting remaining on screen after approval. The plugin uses supported Core network options for relay startup and streamed replies, retries failed handshakes, and shows connection failures clearly.
