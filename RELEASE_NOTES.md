@@ -1,3 +1,13 @@
+# KAI Foundation registry 0.3.49
+
+Updates Remote Access to 0.3.5 with safe error categories for streaming model rejections and distinct request-validation errors. Requires Core 0.7.32. Existing API keys and addresses remain valid.
+
+Pair with kai Android 0.4.18 for clearer rejection messages and an explicit local model response test. This release improves diagnosis; it does not claim to fix an unobserved user-specific model rejection.
+
+Catalog sequence 54. The other twelve plugin entries and legacy catalog are unchanged.
+
+## Previous releases
+
 # KAI Plugin Registry 0.3.48
 
 Publishes Remote Access 0.3.4 with automatic context capability discovery for API clients and verified allocation metadata for local and relayed streams.
