@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.49",
-  "sequence": 54,
-  "generatedAt": "2026-11-19T01:00:54.923Z",
-  "expiresAt": "2027-02-17T01:00:54.923Z",
+  "version": "0.3.50",
+  "sequence": 55,
+  "generatedAt": "2026-11-20T19:50:33.406Z",
+  "expiresAt": "2027-02-18T19:50:33.406Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -274,14 +274,14 @@
       "id": "kai.remote-access",
       "name": "KAI Remote Access",
       "description": "The original Local API workspace with API keys, budgets, usage, privacy controls and optional remote relay access.",
-      "version": "0.3.5",
+      "version": "0.3.6",
       "apiVersion": 3,
       "minCoreVersion": "0.7.32",
       "repository": "therexdev/kai-plugin-remote-access",
-      "url": "https://github.com/therexdev/kai-plugin-remote-access/releases/download/v0.3.5/kai-plugin-remote-access-0.3.5.kaiplugin",
+      "url": "https://github.com/therexdev/kai-plugin-remote-access/releases/download/v0.3.6/kai-plugin-remote-access-0.3.6.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "e63a040e485156ca1364d07e0993b0453f153bf79926e5d2043d287eb39d9b69",
+      "sha256": "89d21585cc8d0f20ac55230f4946c415fb80959122ac0048b6f9e1c9142bcb72",
       "permissions": [
         "native.execute",
         "models.read",
