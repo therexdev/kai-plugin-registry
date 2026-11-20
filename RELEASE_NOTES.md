@@ -1,3 +1,13 @@
+# KAI Plugin Registry 0.3.50
+
+Updates KAI Remote Access to 0.3.6 with streaming keep-alives while a local model loads or processes a prompt, safe late errors, and verified context metadata after response headers. Remote requests stop at 170 seconds before the existing Core network bound; no request is automatically replayed.
+
+Remote Access passed 46 tests and signed-package verification on Linux, Windows and macOS. A 140-second synthetic request passed the real Core SDK and relay implementation through a loopback 125-second idle proxy. Hosted Cloudflare and real-model execution remain to be retested.
+
+Update Remote Access in Plugins and fully quit/reopen Core. Core 0.7.32 is sufficient; keys and endpoint addresses remain valid. kai Android 0.4.25 adds late metadata and timeout display. Other listings and all publisher pins remain unchanged. Catalog sequence 55; legacy registry.json stays unchanged.
+
+## Previous release
+
 # KAI Foundation registry 0.3.49
 
 Updates Remote Access to 0.3.5 with safe error categories for streaming model rejections and distinct request-validation errors. Requires Core 0.7.32. Existing API keys and addresses remain valid.
