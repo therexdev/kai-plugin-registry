@@ -1,3 +1,13 @@
+# KAI Plugin Registry 0.3.51
+
+Updates Teleno Koinos Node to 1.2.0 with native Linux ARM64 / Raspberry Pi support in the same plugin. It automatically selects a checksum-pinned ARM64 or x64 engine. Raspberry Pi requires 64-bit Pi OS Bookworm or newer and ARM64 KAI Core. Windows x64 WSL2 and existing x64 runtimes remain available.
+
+Qualification passed 107 upstream native tests, 4 Python script tests, all 81 plugin tests, actual ARM64/x64 runtime installation and lifecycle checks, Windows WSL2, and Linux/Windows/Intel macOS CI. Physical Pi performance, sustained mainnet sync and funded production still require device/operator testing.
+
+Refresh the catalog and update Teleno to 1.2.0. Catalog sequence 56; the other 12 listings, established publisher pins and immutable legacy registry remain unchanged.
+
+## Previous release
+
 # KAI Plugin Registry 0.3.50
 
 Updates KAI Remote Access to 0.3.6 with streaming keep-alives while a local model loads or processes a prompt, safe late errors, and verified context metadata after response headers. Remote requests stop at 170 seconds before the existing Core network bound; no request is automatically replayed.
