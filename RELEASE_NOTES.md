@@ -1,3 +1,11 @@
+# KAI Plugin Registry 0.3.53
+
+Publishes Teleno Koinos Node 1.3.1 with overview startup recovery. The initial node status loads while Core opens its embedded view; failed or unanswered status reads show a reason and Retry connection instead of remaining on Loading Teleno. The existing mining overview, wallets, signing keys, journals and node data are preserved.
+
+Refresh Plugins and update Teleno in place to 1.3.1. Core 0.7.33 is sufficient; this patch requires no new Core installer. Catalog sequence 58, with the other twelve listings, publisher pins and immutable legacy registry retained.
+
+---
+
 # KAI Plugin Registry 0.3.52
 
 Publishes Teleno Koinos Node 1.3.0 with the current wallet and balances, live node/sync health, confirmed produced blocks, KOIN rewards, VHP consumed and dated reward history directly in Overview. Mining totals exclude deposits and transfers; partial/stale history is labeled. The overview is read-only and retains existing wallets, keys, databases and platform runtime pins.

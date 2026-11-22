@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.52",
-  "sequence": 57,
-  "generatedAt": "2026-11-22T16:26:50.824Z",
-  "expiresAt": "2027-02-20T16:26:50.824Z",
+  "version": "0.3.53",
+  "sequence": 58,
+  "generatedAt": "2026-11-22T19:58:35.909Z",
+  "expiresAt": "2027-02-20T19:58:35.909Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -319,14 +319,14 @@
       "id": "community.teleno-node",
       "name": "Teleno Koinos Node",
       "description": "Teleno node with a live mining overview: independent wallet, balances, sync health, confirmed blocks, KOIN rewards and dated history. Native Linux x64 / ARM64 (64-bit Raspberry Pi OS), Windows x64 through WSL2, and optional x64 Docker. Checksum-pinned Teleno 1.3.0 engine, local RPC, snapshots and public bootstrap.",
-      "version": "1.3.0",
+      "version": "1.3.1",
       "apiVersion": 3,
       "minCoreVersion": "0.7.17",
       "repository": "therexdev/kai-plugin-koinos-node",
-      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.3.0/kai-plugin-teleno-node-1.3.0.kaiplugin",
+      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.3.1/kai-plugin-teleno-node-1.3.1.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "0dfd4521412cb3aa6d860d90d419378f4d4d9768dc361d58b4817f60408454c2",
+      "sha256": "5aa437ccf45d1dedf2b8967d79f82c8db308ac01ea708f893e0e3dceeae773c7",
       "permissions": [
         "native.execute",
         "storage.read",
