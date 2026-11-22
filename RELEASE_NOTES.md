@@ -1,3 +1,11 @@
+# KAI Plugin Registry 0.3.52
+
+Publishes Teleno Koinos Node 1.3.0 with the current wallet and balances, live node/sync health, confirmed produced blocks, KOIN rewards, VHP consumed and dated reward history directly in Overview. Mining totals exclude deposits and transfers; partial/stale history is labeled. The overview is read-only and retains existing wallets, keys, databases and platform runtime pins.
+
+Refresh the catalog and update Teleno to 1.3.0. For the separate Pi AppImage extraction error, also update KAI Core to 0.7.33. Catalog sequence 57; all other 12 listings, publisher pins and immutable legacy registry are preserved.
+
+---
+
 # KAI Plugin Registry 0.3.51
 
 Updates Teleno Koinos Node to 1.2.0 with native Linux ARM64 / Raspberry Pi support in the same plugin. It automatically selects a checksum-pinned ARM64 or x64 engine. Raspberry Pi requires 64-bit Pi OS Bookworm or newer and ARM64 KAI Core. Windows x64 WSL2 and existing x64 runtimes remain available.
