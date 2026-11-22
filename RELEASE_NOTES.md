@@ -1,3 +1,13 @@
+# KAI Plugin Registry 0.3.54
+
+Publishes Teleno Koinos Node 1.4.0 with an Android-inspired dashboard, streamlined Setup, wallet receive QR and paged transaction history, compact reviewed send/burn dialogs, and Send all with fresh balance/mana checks.
+
+Setup / Settings can select a mounted USB or local chain folder while stopped. Node files are checksum-copied, originals retained, and missing/replaced drives block startup rather than falling back to internal storage. The encrypted spending wallet stays in the profile; WSL stays inside Ubuntu.
+
+Refresh Plugins and update Teleno in place to 1.4.0. Core 0.7.33 is sufficient. Catalog sequence 59 retains the other twelve listings, publisher pins and immutable legacy catalog.
+
+---
+
 # KAI Plugin Registry 0.3.53
 
 Publishes Teleno Koinos Node 1.3.1 with overview startup recovery. The initial node status loads while Core opens its embedded view; failed or unanswered status reads show a reason and Retry connection instead of remaining on Loading Teleno. The existing mining overview, wallets, signing keys, journals and node data are preserved.
