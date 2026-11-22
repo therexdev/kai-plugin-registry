@@ -1,3 +1,13 @@
+# KAI Plugin Registry 0.3.55
+
+Updates Teleno Koinos Node to 1.4.1, fixing “Invalid storage key” when choosing a chain drive/folder. Teleno's chain-storage commands now avoid Core's reserved settings-storage namespace. A plugin update is sufficient; wallets, signing keys, chain data and saved storage tasks are preserved.
+
+Regression testing reproduces the failure with 1.4.0 and exercises the signed 1.4.1 folder button through Core's real preload/IPC/host routing, picker cancellation, declined/approved native review, verified copy and view reopen.
+
+Refresh Plugins and update Teleno to 1.4.1. Catalog sequence 60 retains the other twelve entries, publisher pins and immutable legacy registry.
+
+---
+
 # KAI Plugin Registry 0.3.54
 
 Publishes Teleno Koinos Node 1.4.0 with an Android-inspired dashboard, streamlined Setup, wallet receive QR and paged transaction history, compact reviewed send/burn dialogs, and Send all with fresh balance/mana checks.
