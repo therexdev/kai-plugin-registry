@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.3.55",
-  "sequence": 60,
-  "generatedAt": "2026-11-22T23:21:37.502Z",
-  "expiresAt": "2027-02-20T23:21:37.502Z",
+  "version": "0.3.56",
+  "sequence": 61,
+  "generatedAt": "2026-11-23T00:43:39.206Z",
+  "expiresAt": "2027-02-21T00:43:39.206Z",
   "plugins": [
     {
       "id": "kai.assistant",
@@ -319,14 +319,14 @@
       "id": "community.teleno-node",
       "name": "Teleno Koinos Node",
       "description": "Teleno node with a compact live dashboard, guided setup, USB chain storage, wallet QR, paged history and reviewed transfers with Send all. Mining progress, confirmed rewards, snapshots and public bootstrap. Native Linux x64 / ARM64 (64-bit Raspberry Pi OS), Windows x64 through WSL2 and optional x64 Docker.",
-      "version": "1.4.1",
+      "version": "1.4.2",
       "apiVersion": 3,
       "minCoreVersion": "0.7.17",
       "repository": "therexdev/kai-plugin-koinos-node",
-      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.4.1/kai-plugin-teleno-node-1.4.1.kaiplugin",
+      "url": "https://github.com/therexdev/kai-plugin-koinos-node/releases/download/v1.4.2/kai-plugin-teleno-node-1.4.2.kaiplugin",
       "publicKey": "MCowBQYDK2VwAyEAujPt2xYcqLkorZIdmrBEa0ZlLml+yEERDhP+YtI2t5o=",
       "fingerprint": "c0f3c78f6e5a04d9ff4a4d8702ac8e2a66a7f9f0cad3287c46a80823304be440",
-      "sha256": "99c466b791dec3903950ed6fd1a5fb3822e82904fa4009d8bb252fbc7966c167",
+      "sha256": "d5b2e841547a1f2b2f47a1b839c2f1d4ddbc2a0f4c8d4c33af9c18fd89b0798f",
       "permissions": [
         "native.execute",
         "storage.read",
