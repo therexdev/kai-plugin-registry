@@ -1,3 +1,13 @@
+# KAI Plugin Registry 0.3.56
+
+Publishes Teleno Koinos Node 1.4.2 to fix zero confirmed blocks and missing rewards/history while KOIN/VHP balances change. The plugin selects a fuller, chain-verified account-history RPC and accepts protobuf JSON omitting sequence zero. Existing confirmed rewards are backfilled without resetting wallets or chain data.
+
+Refresh Plugins and update Teleno in place to 1.4.2. Core 0.7.33 is sufficient. Catalog sequence 61 retains the other twelve entries, publisher pins, and immutable legacy catalog.
+
+Validation includes 114 Teleno plugin tests, 198 repository tests, live read-only recovery of two confirmed rewards, signed-package verification, sandboxed dashboard/wallet checks, and signed-plugin startup in Core.
+
+---
+
 # KAI Plugin Registry 0.3.55
 
 Updates Teleno Koinos Node to 1.4.1, fixing “Invalid storage key” when choosing a chain drive/folder. Teleno's chain-storage commands now avoid Core's reserved settings-storage namespace. A plugin update is sufficient; wallets, signing keys, chain data and saved storage tasks are preserved.
