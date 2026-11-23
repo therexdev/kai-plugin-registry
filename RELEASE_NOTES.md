@@ -1,3 +1,15 @@
+# KAI Plugin Registry 0.3.57
+
+Updates Teleno Koinos Node to 1.4.3 with a permanent Production tab, a Dashboard shortcut and a production panel in Setup while running. Controls remain accessible when the Observer only guide is complete or collapsed.
+
+Readiness lists observer sync, runtime/storage, wallet, signing key, VHP, registration and pending transactions. A syncing node keeps the enable button disabled with a clear reason. Production still requires an explicit click and native review after all checks pass; sync completion never enables it automatically.
+
+Refresh Plugins and update Teleno in place to 1.4.3. Existing wallets, keys, chain data and the 1.4.2 history repair are retained. Catalog sequence 62 preserves the other twelve listings, publisher pins and immutable legacy asset.
+
+Validation includes 119 Teleno tests, sandboxed navigation through syncing/ready observer-only states, explicit synthetic activation, signed package verification and navigation through the actual Core host. No live funds or funded production were used.
+
+---
+
 # KAI Plugin Registry 0.3.56
 
 Publishes Teleno Koinos Node 1.4.2 to fix zero confirmed blocks and missing rewards/history while KOIN/VHP balances change. The plugin selects a fuller, chain-verified account-history RPC and accepts protobuf JSON omitting sequence zero. Existing confirmed rewards are backfilled without resetting wallets or chain data.
